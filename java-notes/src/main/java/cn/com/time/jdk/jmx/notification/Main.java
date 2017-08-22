@@ -1,7 +1,6 @@
 package cn.com.time.jdk.jmx.notification;
 
 import cn.com.time.jdk.jmx.mbean.Hello;
-import org.springframework.beans.NotWritablePropertyException;
 
 import javax.management.*;
 import java.lang.management.ManagementFactory;
@@ -19,7 +18,6 @@ public class Main {
         Jack jack=new Jack();
         server.registerMBean(jack,new ObjectName("jack:name=Jack"));
         jack.addNotificationListener(new HelloListener(),null,hello);
-        NotWritablePropertyException e;
         Thread.sleep(500000);
     }
 
