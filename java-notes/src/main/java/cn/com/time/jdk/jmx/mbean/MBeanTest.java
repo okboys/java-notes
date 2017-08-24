@@ -27,8 +27,6 @@ public class MBeanTest {
         System.out.println("age="+age+";name="+name);
         HelloMBean proxy=MBeanServerInvocationHandler.newProxyInstance(mbsc,objectName,HelloMBean.class,false);
         proxy.getAge();
-
-        //
         mbsc.invoke(objectName,"getName",null,null);
     }
 
