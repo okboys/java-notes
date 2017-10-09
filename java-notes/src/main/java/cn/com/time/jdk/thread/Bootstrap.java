@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
 public class Bootstrap {
 
     public static void main(String[] args) throws InterruptedException, BrokenBarrierException, TimeoutException {
-        ConcurrentTest.t16();
+        ConcurrentTest.t20();
     }
 
 }

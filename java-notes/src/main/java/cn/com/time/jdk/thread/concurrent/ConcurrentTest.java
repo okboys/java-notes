@@ -1,9 +1,6 @@
 package cn.com.time.jdk.thread.concurrent;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
@@ -287,6 +284,29 @@ public class ConcurrentTest {
         AtomicReference<String> reference=new AtomicReference<>(str);
         String s=reference.get();
     }
+
+    /**
+     * fork and join
+     */
+    public static void t19() throws InterruptedException {
+        Thread t=new Thread(new TestJoin());
+        long start=System.currentTimeMillis();
+        t.start();
+        t.join(100);
+        System.out.println(System.currentTimeMillis()-start);
+        System.out.println("Main finished!");
+    }
+
+    /**
+     * wait and notify,notifyall
+     */
+    public static void t20(){
+
+        Queue queue=new PriorityQueue();
+        new IComsumer("打印机",queue,10).start();
+        new IProducer("电脑",queue,10).start();
+
+    }
 }
 
 /**
@@ -471,4 +491,106 @@ class MyRecursiveAction extends RecursiveAction{
         return actions;
     }
 
+}
+
+class TestJoin implements Runnable {
+
+    @Override
+    public void run() {
+        for(int i=1;i<5;i++){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("睡眠"+i);
+        }
+        System.out.println("TestJoin finished...");
+    }
+
+}
+
+class IComsumer extends Thread{
+
+    private String name;
+
+    private Queue<Integer> queue;
+
+    private int maxSize;
+
+    public IComsumer(String name,Queue queue,int maxSize){
+        super(name);
+        this.queue=queue;
+        this.maxSize=maxSize;
+    }
+
+    @Override
+    public void run() {
+        while (true){
+            synchronized (queue){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                while (queue.isEmpty()){
+                    try {
+                        queue.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                Integer i=queue.remove();
+                System.out.println("NAME:"+getName()+" consume "+i);
+                if(queue.isEmpty()){
+                    System.out.println("queue is empty");
+                    queue.notify();
+                }
+        }
+        }
+    }
+}
+
+class IProducer extends Thread{
+
+    private String name;
+
+    private Queue<Integer> queue;
+
+    private int maxSize;
+
+    public IProducer(String name,Queue queue,int maxSize){
+        super(name);
+        this.queue=queue;
+        this.maxSize=maxSize;
+    }
+
+    @Override
+    public void run() {
+        int i=0;
+        while (true){
+            synchronized (queue){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //循环等待
+                while (queue.size()==maxSize){
+                    try {
+                        queue.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                i++;
+                queue.add(i);
+                System.out.println("NAME:"+getName()+" produce "+i);
+                if(queue.size()==maxSize){
+                    System.out.println("queue is full");
+                    queue.notify();
+                }
+            }
+        }
+    }
 }
