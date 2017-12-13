@@ -1,14 +1,16 @@
-package cn.com.time.jdk.lang;
+package cn.com.time.jdk.util;
+
+import cn.com.time.jdk.util.locale.LocalTest;
 
 /**
- * Created on 202017/9/30 13:53 By tong.luo
+ * Created on 202017/10/12 17:15 By tong.luo
  * <p>
  * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
  */
 public class Bootstrap {
 
     public static void main(String[] args) {
-        System.out.println((~50)+1);
+        LocalTest.t1();
     }
 
 }
