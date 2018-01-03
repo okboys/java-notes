@@ -27,13 +27,19 @@ public class AstarManager {
         open.add(cell);
         List<AstarCell> cells=discardAndgetAvaliableCells(cell,target);
         cells.forEach(m->{
-
             m.setParent(cell);
             calculateDistance(m,target);
         });
     }
 
     private List<AstarCell> discardAndgetAvaliableCells(AstarCell cell,AstarCell target){
+        if(cell==target){
+            System.out.println("AAAAA");
+            while (cell.getParent()!=null){
+                System.out.println(cell.getPoint());
+                cell=cell.getParent();
+            }
+        }
         Point point=cell.getPoint();
         List<AstarCell> cells=new ArrayList<>();
         int maxIndexX=(point.x+1)>=10?point.x:(point.x+1);
@@ -45,7 +51,7 @@ public class AstarManager {
                 AstarCell a=map[i][j];
                 if(a!=null){
                     if(!close.contains(a)&&!open.contains(a)){
-                        if(a.getType()==1){
+                        if(a.getType()==0){
                             cells.add(a);
                         }else {
                             close.add(a);
@@ -70,8 +76,8 @@ public class AstarManager {
             for (int j=minIndexY;j<=maxIndexY;j++){
                 AstarCell a=map[i][j];
                 if(a!=null){
-                    if(!close.contains(a)&&!open.contains(a)){
-                        if(a.getType()==1){
+                    if(!close.contains(a)&&!open.contains(a)&&a!=cell){
+                        if(a.getType()==0){
                             cells.add(a);
                         }
                     }
@@ -95,6 +101,7 @@ public class AstarManager {
             if(ds<distance){
                 distance=ds;
             }else {
+                close.add(cell);
                 iterator.remove();
             }
         }

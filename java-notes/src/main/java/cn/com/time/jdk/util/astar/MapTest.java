@@ -15,6 +15,7 @@ public class MapTest {
         for (int i=0;i<10;i++){
             for (int j=0;j<10;j++){
                 cells[i][j]=new AstarCell();
+                cells[i][j].setType(0);
                 cells[i][j].setPoint(new Point(i,j));
             }
         }
