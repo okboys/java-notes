@@ -7,9 +7,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by TimaNetworks on 2017/8/15.
- */
 public class MapTest extends BaseTest{
 
     public static void hashMap(){

@@ -4,11 +4,6 @@ import cn.com.time.jdk.base.BaseTest;
 
 import java.math.BigDecimal;
 
-/**
- * Created on 202017/10/16 11:13 By tong.luo
- * <p>
- * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class BigDecimalTest extends BaseTest{
 
     public static void t1(){

@@ -4,12 +4,6 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-/**
- * Created on 2018/1/2 16:24
- *
- * @author: tong.luo
- * Copyright @2018 Tima Networks Inc. All Rights Reserved. 
- */
 public class AstarManager {
 
     private AstarCell[][] map=new AstarCell[10][10];

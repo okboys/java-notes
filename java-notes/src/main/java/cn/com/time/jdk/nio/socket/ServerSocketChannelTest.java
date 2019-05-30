@@ -5,9 +5,6 @@ import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
-/**
- * Created by TimaNetworks on 2017/8/21.
- */
 public class ServerSocketChannelTest {
 
     public void t1() throws IOException {

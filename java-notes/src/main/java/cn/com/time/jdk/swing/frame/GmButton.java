@@ -8,12 +8,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created on 2018/1/8 13:38
- *
- * @author: tong.luo
- * Copyright @2018 Tima Networks Inc. All Rights Reserved. 
- */
 public class GmButton extends JButton{
 
     private BufferedImage btnTmg;

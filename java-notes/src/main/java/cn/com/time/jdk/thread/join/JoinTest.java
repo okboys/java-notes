@@ -1,11 +1,5 @@
 package cn.com.time.jdk.thread.join;
 
-/**
- * Created on 2017/12/18 16:52
- *
- * @author: tong.luo
- * Copyright @2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class JoinTest{
 
     public static void main(String[] args) throws InterruptedException {

@@ -6,9 +6,7 @@ import java.lang.management.ManagementFactory;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-/**
- * Created by TimaNetworks on 2017/7/20.
- */
+
 public class Main {
 
     public static void main(String[] args) throws MalformedObjectNameException, NotCompliantMBeanException, InstanceAlreadyExistsException, MBeanException, InstanceNotFoundException, ReflectionException, InterruptedException, RemoteException {

@@ -2,12 +2,6 @@ package cn.com.time.jdk.thread.forkjoin;
 
 import java.util.concurrent.RecursiveTask;
 
-/**
- * Created on 2017/12/18 18:08
- *
- * @author: tong.luo
- * Copyright @2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class CountRecursiveTask extends RecursiveTask<Integer>{
 
     int a[];

@@ -2,12 +2,6 @@ package cn.com.time.jdk.util.astar;
 
 import java.awt.*;
 
-/**
- * Created on 2018/1/2 16:24
- *
- * @author: tong.luo
- * Copyright @2018 Tima Networks Inc. All Rights Reserved. 
- */
 public class MapTest {
 
     public static void main(String[] args) {

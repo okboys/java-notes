@@ -4,9 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 
-/**
- * Created by TimaNetworks on 2017/8/24.
- */
 public interface TArray {
 
     String getBaseTypeName() throws SQLException;

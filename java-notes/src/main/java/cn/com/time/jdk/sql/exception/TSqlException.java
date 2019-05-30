@@ -6,9 +6,6 @@ import java.sql.DriverManager;
 import java.sql.SQLWarning;
 import java.util.Iterator;
 
-/**
- * Created by TimaNetworks on 2017/8/24.
- */
 public class TSqlException extends Exception implements Iterable<Throwable>{
 
     private String sqlState;

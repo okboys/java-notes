@@ -1,8 +1,5 @@
 package cn.com.time.jdk.jmx.notification;
 
-/**
- * Created by TimaNetworks on 2017/7/21.
- */
 public interface UserMBean {
 
     String getName();

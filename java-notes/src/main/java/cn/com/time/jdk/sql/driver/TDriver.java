@@ -4,9 +4,6 @@ import java.sql.*;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-/**
- * Created by TimaNetworks on 2017/8/28.
- */
 public class TDriver implements Driver{
     @Override
     public Connection connect(String url, Properties info) throws SQLException {

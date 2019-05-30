@@ -2,12 +2,6 @@ package cn.com.time.jdk.thread.sp;
 
 import java.util.Vector;
 
-/**
- * Created on 2017/12/18 13:17
- *
- * @author: tong.luo
- * Copyright @2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class Producer implements Runnable{
 
     private Vector<String> contents;

@@ -2,12 +2,6 @@ package cn.com.time.jdk.thread.forkjoin;
 
 import java.util.concurrent.RecursiveAction;
 
-/**
- * Created on 2017/12/18 17:20
- *
- * @author: tong.luo
- * Copyright @2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class PrintRecursiveAction extends RecursiveAction{
 
     private int size=50;

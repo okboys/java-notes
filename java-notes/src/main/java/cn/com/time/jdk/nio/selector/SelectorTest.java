@@ -5,9 +5,6 @@ import java.io.RandomAccessFile;
 import java.nio.channels.*;
 import java.util.Set;
 
-/**
- * Created by TimaNetworks on 2017/8/21.
- */
 public class SelectorTest {
 
     /**

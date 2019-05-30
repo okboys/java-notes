@@ -1,10 +1,5 @@
 package cn.com.time.jdk.lang.bits;
 
-/**
- * Created on 202017/10/30 9:49 By tong.luo
- * <p>
- * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class BitEncoder {
 
     private byte[] bytes;

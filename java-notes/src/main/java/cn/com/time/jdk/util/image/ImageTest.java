@@ -5,12 +5,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created on 2018/1/2 10:37
- *
- * @author: tong.luo
- * Copyright @2018 Tima Networks Inc. All Rights Reserved. 
- */
 public class ImageTest {
 
     public static void t1() throws IOException {

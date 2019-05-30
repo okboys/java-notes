@@ -16,11 +16,6 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.*;
 
-/**
- * Created on 202017/9/22 16:15 By tong.luo
- * <p>
- * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class RSAEncrypt {
 
     private static final char[] HEX_CHAR={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};

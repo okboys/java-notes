@@ -9,11 +9,6 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * Created on 202017/9/28 16:17 By tong.luo
- * <p>
- * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class ConcurrentTest {
 
     /**

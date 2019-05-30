@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.SocketChannel;
 
-/**
- * Created by TimaNetworks on 2017/8/21.
- */
 public class SocketChannelTest {
 
     public static void t1() throws IOException {

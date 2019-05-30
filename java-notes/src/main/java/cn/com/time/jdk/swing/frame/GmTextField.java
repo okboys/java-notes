@@ -6,12 +6,6 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-/**
- * Created on 2018/1/11 10:00
- *
- * @author: tong.luo
- * Copyright @2018 Tima Networks Inc. All Rights Reserved. 
- */
 public class GmTextField extends JPasswordField{
 
     public GmTextField(int width,int height){

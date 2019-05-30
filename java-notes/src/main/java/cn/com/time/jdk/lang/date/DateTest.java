@@ -8,11 +8,6 @@ import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 
-/**
- * Created on 202017/9/30 13:53 By tong.luo
- * <p>
- * Copyright @ 2017 Tima Networks Inc. All Rights Reserved. 
- */
 public class DateTest extends BaseTest{
 
     /**

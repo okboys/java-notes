@@ -5,12 +5,6 @@
 //import java.util.Random;
 //import java.util.concurrent.TimeUnit;
 //
-///**
-// * Created on 2017/12/18 17:44
-// *
-// * @author: tong.luo
-// * Copyright @2017 Tima Networks Inc. All Rights Reserved. 
-// */
 //public class Test {
 //
 //    public static final int SIZE=1000000;

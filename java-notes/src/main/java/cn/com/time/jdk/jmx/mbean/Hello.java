@@ -1,8 +1,6 @@
 package cn.com.time.jdk.jmx.mbean;
 
-/**
- * Created by TimaNetworks on 2017/7/21.
- */
+
 public class Hello implements HelloMBean {
 
     private String name;
